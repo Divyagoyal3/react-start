@@ -10,6 +10,9 @@ import Counter from './components/Counter'
 import ClickHandler from './components/ClickHandler'
 import Simpleform from './components/Simpleform'
 import Multiform from './components/Multiform'
+import Uncontrolled from './components/Uncontrolled'
+import Todolist from './components/Todolist'
+import Conditions from './components/Conditions'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,8 +31,12 @@ function App() {
       {/* <Parentcomp/> */}
       {/* <Counter/> */}
       {/* <ClickHandler/> */}
-      <Simpleform/>
-       <Multiform/>
+      {/* <Simpleform/> */}
+       {/* <Multiform/> */}
+       {/* <Uncontrolled/> */}
+       {/*<Todolist/>*/}
+       <Conditions/>
+       
     </>
   )
 }
