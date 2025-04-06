@@ -9,37 +9,37 @@ import { GiHamburger } from "react-icons/gi";
 const Categories = [
     {
         id :1,
-        name : "All",
+        name : "all",
         image : <TiThSmallOutline className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :2,
-        name : "Breakfast",
+        name : "breakfast",
         image :<MdOutlineFreeBreakfast className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :3,
-        name : "Soup",
+        name : "soups",
         image : <TbSoup className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :4,
-        name : "Pasta",
+        name : "pasta",
         image : <CiBowlNoodles className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :5,
-        name : "MainCourse",
+        name : "main_course",
         image : <MdOutlineFoodBank className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :6,
-        name : "Pizza",
+        name : "pizza",
         image : <GiFullPizza className="w-[30px] h-[30px] text-green-500" />,
     },
     {
         id :7,
-        name : "Burger",
+        name : "burger",
         image : <GiHamburger className="w-[30px] h-[30px] text-green-500" />,
     },
 ];
