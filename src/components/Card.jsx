@@ -18,7 +18,7 @@ function Card({name,image,id,price,type}){
                 <div className='flex justify-between items-center gap-2 text-green-500 text-lg font-bold'>
                    {type ==="veg"?<LuLeafyGreen />:<GiChickenOven/>} <span>{type}</span></div>
             </div>
-            <div className='w-full h-[40px] bg-green-500 rounded-md flex justify-center items-center text-white font-semibold cursor-pointer transition-all duration-200'>
+            <div className='w-full h-[40px] bg-green-300 rounded-md flex justify-center items-center text-white font-semibold cursor-pointer transition-all duration-200'>
                 Add to Cart
             </div>
         </div>
