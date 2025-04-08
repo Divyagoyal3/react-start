@@ -4,6 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { LuShoppingBag } from "react-icons/lu";
 import { dataContext } from "../context/UserContext";
 import { food_items } from "../food";
+import { useSelector } from "react-redux";
 function Nav  ()  {
   let { input, setinput, cate, setCate,showCart,setShowCart } = useContext(dataContext);
   useEffect(() => {
@@ -14,6 +15,8 @@ function Nav  ()  {
      console.log(newlist);
   }, [input]);
     // console.log(input);  
+    let items = useSelector((state) => state);
+    console.log(items);
   return (
     <div className="w-full h-[100px] flex justify-between items-center px-5 md:px-8">
       <div className="w-[60px] h-[60px] bg-white flex justify-center items-center shadow-lg rounded-md ">
@@ -35,7 +38,7 @@ function Nav  ()  {
       </form>
       <div className="w-[60px] h-[60px] bg-white  relative flex justify-center items-center shadow-lg rounded-md cursor-pointer " onClick={()=>setShowCart(true)}>
         <span className="text-green-500 text-[18px] absolute top-0 right-1.5 font-semibold">
-          0
+        {items.cart.length}
         </span>
         <LuShoppingBag className=" w-[30px] h-[30px] text-green-500  font-bold" />
       </div>

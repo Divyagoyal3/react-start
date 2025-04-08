@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { dataContext } from '../context/UserContext'
 import { RxCross2 } from "react-icons/rx"
 import Card2 from '../components/Card2'
+import { useSelector } from 'react-redux'
 
 
 function Home () {
@@ -29,7 +30,8 @@ function Home () {
       setCate(newCategory);
     }
   }
-  
+  let items = useSelector((state) => state.cart);
+
   return (
     <div className='bg-slate-200  w-full min-h-[3200px] '>
       <Nav />
@@ -49,12 +51,16 @@ function Home () {
         image={item.food_image} price={item.price} id={item.id} type={item.food_type}/>))}
       </div>
        
-      <div className={`w-[40vw] h-[100%] fixed top-0 right-0 bg-white shadow-lg p-5 transition-all duration-500 ${showCart ? "translate-x-0" : "translate-x-full"} `}> 
+      <div className={` wd-full md:w-[40vw] h-[100%] fixed top-0 right-0 bg-white shadow-lg p-5 transition-all duration-500 ${showCart ? "translate-x-0" : "translate-x-full"} `}> 
         <header className='w-[100%] flex justify-between items-center'>
          <span className='text-green-400 text-[18px] font-semibold'>Order Items</span>
          <RxCross2 onClick= {()=>setShowCart(false)} className=' w-[20px] h-[20px] cursor-pointer  hover:text-gray-500 text-green-400 text-[18px] font-semibold'  />
         </header>
-        <Card2/>
+        <div className='w-full  mt-8 flex flex-col gap-5 h-[80vh] overflow-y-scroll scrollbar-hide'>
+          {items.map((item) => (<Card2 name ={item.name}
+          image={item.image} price={item.price} id={item.id}  qty ={item.qty}/>))}
+        </div>
+        {/* <Card2/> */}
       </div>
       </div>
     
